@@ -12,6 +12,14 @@ import {
   IoMdSnow,
   IoMdThunderstorm,
 } from "react-icons/io";
+import {
+  BsCloudHaze2Fill,
+  BsCloudDrizzleFill,
+  BsEye,
+  BsWater,
+  BsThermometer,
+  BsWind,
+} from "react-icons/bs";
 
 const App = () => {
   return <div>react app</div>;
