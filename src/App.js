@@ -27,6 +27,14 @@ import { ImSpinner8 } from "react-icons/im";
 const APIKey = "e5fdf6cb75ee9d788b59a6f2f6db5d28";
 
 function App() {
+  const [data, setData] = useState(null);
+  const [location, setLocation] = useState("Matuu");
+
+  // utilisng useEffect to fetch data\
+  useEffect(() => {
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}`;
+  });
+
   return <div>react app</div>;
 }
 
