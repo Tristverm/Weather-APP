@@ -32,8 +32,11 @@ function App() {
 
   // utilisng useEffect to fetch data\
   useEffect(() => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}`;
-  });
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${APIKey}`;
+    axios.get(url).then((response) => {
+      setData(response.data);
+    });
+  }, [location]);
 
   return <div>react app</div>;
 }
