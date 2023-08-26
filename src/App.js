@@ -20,9 +20,14 @@ import {
   BsThermometer,
   BsWind,
 } from "react-icons/bs";
+import { TbTemperatureCelsius } from "react-icons/tb";
+import { ImSpinner8 } from "react-icons/im";
 
-const App = () => {
+// API Key
+const APIKey = "e5fdf6cb75ee9d788b59a6f2f6db5d28";
+
+function App() {
   return <div>react app</div>;
-};
+}
 
 export default App;
