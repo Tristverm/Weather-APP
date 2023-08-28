@@ -44,12 +44,17 @@ function App() {
     // }
     // dataFetch(url);
   }, [location]);
+  console.log(data);
 
   // whenever data is null show loader
-  if(!data){
-
-    return
-
+  if (!data) {
+    return (
+      <div>
+        <div>
+          <ImSpinner8 className="text-5xl animate-spin" />
+        </div>
+      </div>
+    );
   }
   return <div>react app</div>;
 }
