@@ -75,9 +75,11 @@ function App() {
       <IoMdThunderstorm />
     );
 
-  return <>
-    
-  </>;
+  return (
+    <>
+      <div className="text-6xl">{icon}</div>
+    </>
+  );
 }
 
 export default App;
