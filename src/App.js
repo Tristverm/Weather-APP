@@ -28,7 +28,7 @@ const APIKey = "e5fdf6cb75ee9d788b59a6f2f6db5d28";
 
 function App() {
   const [data, setData] = useState(null);
-  const [location, setLocation] = useState("Kithimani");
+  const [location, setLocation] = useState("Dubai");
 
   // utilisng useEffect to fetch data\
   useEffect(() => {
@@ -45,7 +45,12 @@ function App() {
     // dataFetch(url);
   }, [location]);
 
-  console.log(data);
+  // whenever data is null show loader
+  if(!data){
+
+    return
+
+  }
   return <div>react app</div>;
 }
 
