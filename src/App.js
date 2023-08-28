@@ -56,7 +56,28 @@ function App() {
       </div>
     );
   }
-  return <div>react app</div>;
+
+  // Selecting the icon based on weather
+  let icon =
+    data.weather[0].main === "Clouds" ? (
+      <IoMdCloudy />
+    ) : data.weather[0].main === "Haze" ? (
+      <BsCloudHaze2Fill />
+    ) : data.weather[0].main === "Rain" ? (
+      <IoMdRainy />
+    ) : data.weather[0].main === "Clear" ? (
+      <IoMdSunny />
+    ) : data.weather[0].main === "Drizzle" ? (
+      <BsCloudDrizzleFill />
+    ) : data.weather[0].main === "Snow" ? (
+      <IoMdSnow />
+    ) : (
+      <IoMdThunderstorm />
+    );
+
+  return <>
+    
+  </>;
 }
 
 export default App;
