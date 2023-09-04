@@ -77,11 +77,11 @@ function App() {
 
   return (
     <>
-      <div className="w-full h-screen bg-gradientBg">
+      <div className="w-full h-screen bg-gradientBg bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center px-4 lg:px-0">
         {/* form section */}
         <form></form>
         {/* card section */}
-        <div>
+        <div className="w-full  bg-black/20 max-w-[450px] min-h-[584px] text-white backdrop-blur-[32px]">
           <div>
             {/* card top */}
             <div>card top</div>
