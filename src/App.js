@@ -77,11 +77,20 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="w-full h-screen bg-gradientBg">
         {/* form section */}
         <form></form>
         {/* card section */}
-        <div></div>
+        <div>
+          <div>
+            {/* card top */}
+            <div>card top</div>
+            {/* card body  */}
+            <div>card body</div>
+            {/* card bottom */}
+            <div>card bottom</div>
+          </div>
+        </div>
       </div>
     </>
   );
