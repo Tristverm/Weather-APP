@@ -77,7 +77,12 @@ function App() {
 
   return (
     <>
-      <div className="text-6xl">{icon}</div>
+      <div>
+        {/* form section */}
+        <form></form>
+        {/* card section */}
+        <div></div>
+      </div>
     </>
   );
 }
