@@ -22,13 +22,15 @@ import {
 } from "react-icons/bs";
 import { TbTemperatureCelsius } from "react-icons/tb";
 import { ImSpinner8 } from "react-icons/im";
+// date
+let date = new Date();
 
 // API Key
 const APIKey = "e5fdf6cb75ee9d788b59a6f2f6db5d28";
 
 function App() {
   const [data, setData] = useState(null);
-  const [location, setLocation] = useState("Dubai");
+  const [location, setLocation] = useState("Kithimani");
 
   // utilisng useEffect to fetch data\
   useEffect(() => {
@@ -81,10 +83,20 @@ function App() {
         {/* form section */}
         <form></form>
         {/* card section */}
-        <div className="w-full  bg-black/20 max-w-[450px] min-h-[584px] text-white backdrop-blur-[32px]">
+        <div className="w-full  bg-gradient-to-br from-violet-600/10 via-transparent to-violet-600/10  max-w-[450px] min-h-[584px] text-white backdrop-blur-[32px] rounded-[32px] py-12 px-6 shadow-black/80 shadow-lg bg-blend-luminosity">
           <div>
             {/* card top */}
-            <div>card top</div>
+            {/* icon */}
+            <div className="text-[87px]">{icon}</div>
+            <div>
+              {/* country name */}
+              <div className="text-2xl font-semibold">
+                {data.name},{data.sys.country}
+              </div>
+              {/* date */}
+              <div>{date.getUTCDate}/{date.getUTCMonth}/{date.getUTCFullYear}</div>
+            </div>
+
             {/* card body  */}
             <div>card body</div>
             {/* card bottom */}
