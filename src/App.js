@@ -137,7 +137,15 @@ function App() {
                   </div>
                   <div>
                     Visibility{" "}
-                    <span className="ml-2">{data.visibility / 1000}km</span>
+                    <span className="ml-2">
+                      <CountUp
+                        start={0}
+                        end={data.visibility / 1000}
+                        duration={5}
+                        useEasing={false}
+                      />
+                      km
+                    </span>
                   </div>
                 </div>
               </div>
