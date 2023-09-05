@@ -143,6 +143,27 @@ function App() {
                         end={data.visibility / 1000}
                         duration={5}
                         useEasing={false}
+                        preserveValue={true}
+                      />
+                      km
+                    </span>
+                  </div>
+                </div>
+                <div className="flex items-center gap-x-2">
+                  {/* icon */}
+
+                  <div className="text-[87px]">
+                    <BsEye />
+                  </div>
+                  <div>
+                    Visibility{" "}
+                    <span className="ml-2">
+                      <CountUp
+                        start={0}
+                        end={data.visibility / 1000}
+                        duration={5}
+                        useEasing={false}
+                        preserveValue={true}
                       />
                       km
                     </span>
