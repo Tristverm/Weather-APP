@@ -109,7 +109,7 @@ function App() {
             >
               <div>
                 {/* temperature */}
-                <div>{(((+data.main.temp - 32) * 5) / 9).toFixed(2)}&deg;C</div>
+                <div className="text-[144px] leading-none">{(((+data.main.temp - 32) * 5) / 9).toFixed(1)}&deg;C</div>
               </div>
             </div>
             {/* card bottom */}
