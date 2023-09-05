@@ -115,16 +115,33 @@ function App() {
                   <CountUp
                     start={0}
                     end={(((+data.main.temp - 32) * 5) / 9).toFixed(1)}
-                    duration={5} useEasing={false}
+                    duration={5}
+                    useEasing={false}
                   />
-                  &deg;C
                 </div>
+                <span className="text-4xl font-light">&deg;C</span>
               </div>
               {/* weather desc */}
-              <div>{data.weather[0].description}</div>
+              <div className="capitalize text-center">
+                {data.weather[0].description}
+              </div>
             </div>
             {/* card bottom */}
-            <div>card bottom</div>
+            <div>
+              <div>
+                <div className="flex items-center gap-x-2">
+                  {/* icon */}
+
+                  <div className="text-[87px]">
+                    <BsEye />
+                  </div>
+                  <div>
+                    Visibility{" "}
+                    <span className="ml-2">{data.visibility / 1000}km</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
