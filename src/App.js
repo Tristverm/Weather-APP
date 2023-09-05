@@ -35,7 +35,7 @@ function App() {
   // utilisng useEffect to fetch data\
   useEffect(() => {
     console.log("fetchig data");
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${APIKey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${APIKey}`;
     axios.get(url).then((response) => {
       setData(response.data);
     });
@@ -83,22 +83,35 @@ function App() {
         {/* form section */}
         <form></form>
         {/* card section */}
-        <div className="w-full  bg-gradient-to-br from-violet-600/10 via-transparent to-violet-600/10  max-w-[450px] min-h-[584px] text-white backdrop-blur-[32px] rounded-[32px] py-12 px-6 shadow-black/80 shadow-lg bg-blend-luminosity">
+        <div className="w-full  bg-gradient-to-br from-violet-600/10 via-black/30 to-violet-600/10  max-w-[450px] min-h-[584px] text-white backdrop-blur-[32px] rounded-[32px] py-12 px-6 shadow-black/80 shadow-lg bg-blend-luminosity">
           <div>
             {/* card top */}
-            {/* icon */}
-            <div className="text-[87px]">{icon}</div>
-            <div>
-              {/* country name */}
-              <div className="text-2xl font-semibold">
-                {data.name},{data.sys.country}
+            <div className="flex flex-row items-center justify-start gap-x-5">
+              {/* icon */}
+              <div className="text-[87px]">{icon}</div>
+              <div>
+                {/* country name */}
+                <div className="text-2xl font-semibold">
+                  {data.name},{data.sys.country}
+                </div>
+                {/* date */}
+                <div>
+                  {date.getUTCDate()}/{+date.getUTCMonth() + 1}/
+                  {date.getUTCFullYear()}
+                </div>
               </div>
-              {/* date */}
-              <div>{date.getUTCDate}/{date.getUTCMonth}/{date.getUTCFullYear}</div>
             </div>
 
             {/* card body  */}
-            <div>card body</div>
+            <div
+              className="
+            my-20"
+            >
+              <div>
+                {/* temperature */}
+                <div>{(((+data.main.temp - 32) * 5) / 9).toFixed(2)}&deg;C</div>
+              </div>
+            </div>
             {/* card bottom */}
             <div>card bottom</div>
           </div>
