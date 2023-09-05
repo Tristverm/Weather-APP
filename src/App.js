@@ -109,17 +109,19 @@ function App() {
               className="
             my-20"
             >
-              <div>
+              <div className="flex justify-center items-center">
                 {/* temperature */}
-                <div className="text-[144px] leading-none">
+                <div className="text-[144px] leading-none font-light ">
                   <CountUp
                     start={0}
                     end={(((+data.main.temp - 32) * 5) / 9).toFixed(1)}
-                    duration={5}
+                    duration={5} useEasing={false}
                   />
                   &deg;C
                 </div>
               </div>
+              {/* weather desc */}
+              <div>{data.weather[0].description}</div>
             </div>
             {/* card bottom */}
             <div>card bottom</div>
