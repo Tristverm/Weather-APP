@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import CountUp from "react-countup";
 
 // importing axios for comm
 
@@ -22,6 +23,7 @@ import {
 } from "react-icons/bs";
 import { TbTemperatureCelsius } from "react-icons/tb";
 import { ImSpinner8 } from "react-icons/im";
+// import CountUp from "react-countup/build/CountUp";
 // date
 let date = new Date();
 
@@ -109,7 +111,14 @@ function App() {
             >
               <div>
                 {/* temperature */}
-                <div className="text-[144px] leading-none">{(((+data.main.temp - 32) * 5) / 9).toFixed(1)}&deg;C</div>
+                <div className="text-[144px] leading-none">
+                  <CountUp
+                    start={0}
+                    end={(((+data.main.temp - 32) * 5) / 9).toFixed(1)}
+                    duration={5}
+                  />
+                  &deg;C
+                </div>
               </div>
             </div>
             {/* card bottom */}
