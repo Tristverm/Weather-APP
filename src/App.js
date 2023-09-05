@@ -52,8 +52,8 @@ function App() {
   if (!data) {
     return (
       <div>
-        <div>
-          <ImSpinner8 className="text-5xl animate-spin" />
+        <div className="w-full h-screen bg-gradientBg bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center px-4 lg:px-0">
+          <ImSpinner8 className="text-5xl animate-spin text-white" />
         </div>
       </div>
     );
