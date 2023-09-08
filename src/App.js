@@ -127,7 +127,7 @@ function App() {
               </div>
             </div>
             {/* card bottom */}
-            <div className="max-w-[378px] mx-auto flex flex-col ">
+            <div className="max-w-[378px] mx-auto flex flex-col space-y-2 ">
               <div className="flex flex-row justify-between items-center ">
                 <div className="flex items-center gap-x-2">
                   {/* icon */}
@@ -165,7 +165,48 @@ function App() {
                         useEasing={false}
                         preserveValuelue={true}
                       />
-                      <TbTemperatureCelsius className="inline"/>
+                      <TbTemperatureCelsius className="inline" />
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-row justify-between items-center ">
+                <div className="flex items-center gap-x-2">
+                  {/* icon */}
+
+                  <div className="text-[20px]">
+                    <BsWater />
+                  </div>
+                  <div>
+                    Humidity
+                    <span className="ml-2">
+                      <CountUp
+                        start={0}
+                        end={data.main.humidity}
+                        duration={5}
+                        useEasing={false}
+                        preserveValue={true}
+                      />
+                    </span>
+                  </div>
+                </div>
+                <div className="flex flex-row items-center gap-x-2">
+                  {/* icon */}
+
+                  <div className="text-[20px]">
+                    <BsThermometer />
+                  </div>
+                  <div>
+                    Feels Like
+                    <span className="ml-2">
+                      <CountUp
+                        start={0}
+                        end={data.main.feels_like}
+                        duration={5}
+                        useEasing={false}
+                        preserveValuelue={true}
+                      />
+                      <TbTemperatureCelsius className="inline" />
                     </span>
                   </div>
                 </div>
