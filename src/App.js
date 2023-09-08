@@ -83,7 +83,7 @@ function App() {
     <>
       <div className="w-full h-screen bg-gradientBg bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center px-4 lg:px-0">
         {/* form section */}
-        <form></form>
+        <form>form</form>
         {/* card section */}
         <div className="w-full  bg-gradient-to-br from-violet-600/10 via-black/30 to-violet-600/10  max-w-[450px] min-h-[584px] text-white backdrop-blur-[32px] rounded-[32px] py-12 px-6 shadow-black/80 shadow-lg bg-blend-luminosity">
           <div>
@@ -128,11 +128,11 @@ function App() {
             </div>
             {/* card bottom */}
             <div>
-              <div>
+              <div className="flex flex-row justify-between items-center">
                 <div className="flex items-center gap-x-2">
                   {/* icon */}
 
-                  <div className="text-[87px]">
+                  <div className="text-[20px]">
                     <BsEye />
                   </div>
                   <div>
@@ -149,10 +149,10 @@ function App() {
                     </span>
                   </div>
                 </div>
-                <div className="flex items-center gap-x-2">
+                <div className="flex flex-row items-center gap-x-2">
                   {/* icon */}
 
-                  <div className="text-[87px]">
+                  <div className="text-[20px]">
                     <BsEye />
                   </div>
                   <div>
@@ -163,7 +163,7 @@ function App() {
                         end={data.visibility / 1000}
                         duration={5}
                         useEasing={false}
-                        preserveValue={true}
+                        preserveValuelue={true}
                       />
                       km
                     </span>
