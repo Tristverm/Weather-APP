@@ -127,8 +127,8 @@ function App() {
               </div>
             </div>
             {/* card bottom */}
-            <div>
-              <div className="flex flex-row justify-between items-center">
+            <div className="max-w-[378px] mx-auto flex flex-col ">
+              <div className="flex flex-row justify-between items-center ">
                 <div className="flex items-center gap-x-2">
                   {/* icon */}
 
@@ -153,19 +153,19 @@ function App() {
                   {/* icon */}
 
                   <div className="text-[20px]">
-                    <BsEye />
+                    <BsThermometer />
                   </div>
                   <div>
-                    Visibility{" "}
+                    Feels Like
                     <span className="ml-2">
                       <CountUp
                         start={0}
-                        end={data.visibility / 1000}
+                        end={data.main.feels_like}
                         duration={5}
                         useEasing={false}
                         preserveValuelue={true}
                       />
-                      km
+                      <TbTemperatureCelsius className="inline"/>
                     </span>
                   </div>
                 </div>
