@@ -170,10 +170,9 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-row justify-between items-center ">
+              <div className="flex flex-row justify-between items-start ">
                 <div className="flex items-center gap-x-2">
                   {/* icon */}
-
                   <div className="text-[20px]">
                     <BsWater />
                   </div>
@@ -186,27 +185,27 @@ function App() {
                         duration={5}
                         useEasing={false}
                         preserveValue={true}
-                      />
+                      />{" "}
+                      %
                     </span>
                   </div>
                 </div>
-                <div className="flex flex-row items-center gap-x-2">
+                <div className="flex flex-row items-center gap-x-2 mr-6">
                   {/* icon */}
-
                   <div className="text-[20px]">
-                    <BsThermometer />
+                    <BsWind />
                   </div>
                   <div>
-                    Feels Like
+                    Wind
                     <span className="ml-2">
                       <CountUp
                         start={0}
-                        end={data.main.feels_like}
+                        end={data.wind.speed}
                         duration={5}
                         useEasing={false}
                         preserveValuelue={true}
                       />
-                      <TbTemperatureCelsius className="inline" />
+                                            m/s
                     </span>
                   </div>
                 </div>
