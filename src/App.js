@@ -83,7 +83,13 @@ function App() {
     <>
       <div className="w-full h-screen bg-gradientBg bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center px-4 lg:px-0">
         {/* form section */}
-        <form>form</form>
+        <form>
+          <input
+            type="text"
+            placeholder="Search City or Country"
+          />
+          <button></button>
+        </form>
         {/* card section */}
         <div className="w-full  bg-gradient-to-br from-violet-600/10 via-black/30 to-violet-600/10  max-w-[450px] min-h-[584px] text-white backdrop-blur-[32px] rounded-[32px] py-12 px-6 shadow-black/80 shadow-lg bg-blend-luminosity">
           <div>
@@ -205,7 +211,7 @@ function App() {
                         useEasing={false}
                         preserveValuelue={true}
                       />
-                                            m/s
+                      m/s
                     </span>
                   </div>
                 </div>
