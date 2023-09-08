@@ -84,15 +84,15 @@ function App() {
     <>
       <div className="w-full h-screen bg-gradientBg bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center px-4 lg:px-0">
         {/* form section */}
-        <form className="h-16 bg-gradient-to-br from-violet-600/10 via-black/30 to-violet-600/10  w-full max-w-[450px] rounded-full backdrop-blur[32px] mb-8">
-          <div className="h-full relative flex items-center justify-between">
+        <form className="shadow-2xl shadow-black h-16 bg-gradient-to-br from-violet-600/10 via-black/30 to-violet-600/10  w-full max-w-[450px] rounded-full backdrop-blur[32px] mb-8">
+          <div className="h-full relative flex items-center justify-between px-4 mx-auto">
             <input
               type="text"
               placeholder="Search City or Country"
-              className="placeholder:text-white   bg-transparent focus:outline-none flex-1"
+              className="placeholder:text-white h-full text-white text-[15px] font-light pl-6 bg-transparent focus:outline-none flex-1"
             />
-            <button>
-              <IoMdSearch />
+            <button className="h-12 w-20 flex flex-row justify-center items-center bg-[#1ab8ed] rounded-full">
+              <IoMdSearch className="text-white text-2xl " />
             </button>
           </div>
         </form>
